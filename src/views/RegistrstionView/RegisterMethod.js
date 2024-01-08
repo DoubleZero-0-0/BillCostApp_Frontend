@@ -12,9 +12,19 @@ export const validateEmail = (rule, value, callback) => {
   }
 };
 
-export async function RegisterPost(email, passowrd) {
+export const validateName = (rule, value, callback) => {
+  if (value) {
+    callback();
+  } else {
+    callback(new Error("Please write a valid name."));
+  }
+};
+
+
+export async function RegisterPost(name,email, passowrd) {
   try {
     const postData = {
+      userName: name,
       userEmail: email,
       userPassword: passowrd,
     };
@@ -24,11 +34,10 @@ export async function RegisterPost(email, passowrd) {
     }
 
     const dataJson = JSON.stringify(postData);
-    console.log(dataJson);
     //Request send to api
     axios.post("/register",dataJson, { headers })
     .then(res => {
-        if (res.data.data['code'] == 0) {
+        if (res.data['code'] === 0) {
           alertSuccess("Registrations Success");
         } else {
           alertError("Registrations Failed");

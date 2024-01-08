@@ -2,24 +2,30 @@
 import {
     validateEmail,
     RegisterPost,
+    validateName
 } from "@/views/RegistrstionView/RegisterMethod.js";
 
 export default {
     data() {
         return {
             registerForm: {
+                name: "",
                 email: "",
                 password: "",
             },
         };
     },
     methods: {
+        validateNameCheck() {
+            validateName;
+        },
+
         validateEmailCheck() {
             validateEmail;
         },
 
         RegisterPostCheck() {
-            RegisterPost(this.registerForm.email, this.registerForm.password);
+            RegisterPost(this.registerForm.name, this.registerForm.email, this.registerForm.password);
         },
     },
 };
@@ -33,6 +39,16 @@ export default {
                     <h2 class="text-center headLineFont">BillCostApp</h2>
                     <hr />
                     <h3 class="">Registration</h3>
+                    <el-form-item label="Name" prop="name" :rules="[
+                        {
+                            required: true,
+                            message: 'Please Write Your Name',
+                            trigger: 'blur',
+                        },
+                        { validator: validateName, trigger: 'blur' },
+                    ]">
+                        <el-input v-model="registerForm.name" type="text" autocomplete="off"></el-input>
+                    </el-form-item>
                     <el-form-item label="Email" prop="email" :rules="[
                         {
                             required: true,
