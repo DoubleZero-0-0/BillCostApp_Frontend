@@ -1,5 +1,8 @@
 <script>
-import { validateEmail, RegisterPost } from "@/views/RegistrstionView/RegisterMethod.js";
+import {
+    validateEmail,
+    RegisterPost,
+} from "@/views/RegistrstionView/RegisterMethod.js";
 
 export default {
     data() {
