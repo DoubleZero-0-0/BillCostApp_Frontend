@@ -30,4 +30,20 @@ jobs:
             tags: |
               atulchan/billcost_app_frontend:${{ github.sha }}
 
+        - name: SSH into AWS Instance and Update Docker Container
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.AWS_HOST }}
+            username: ${{ secrets.AWS_USERNAME }}
+            key: ${{ secrets.AWS_SSH_PRIVATE_KEY }}
+            script: |
+              docker stop billcost_app_frontend
+              docker rm billcost_app_frontend
+              previous_image_id=$(docker images --format "{{.ID}}" atulchan/billcost_app_frontend)
+              if [ -n "$previous_image_id" ]; then
+              docker rmi "$previous_image_id"
+              fi
+              docker pull atulchan/billcost_app_backend:${{ github.sha }}
+              docker run -d -p 9191:80 --name billcost_app_frontend atulchan/billcost_app_frontend:${{ github.sha }} 
+
     
