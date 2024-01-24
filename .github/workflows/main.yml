@@ -28,6 +28,6 @@ jobs:
             context: .
             push: true
             tags: |
-              atulchan/billcost_app_backend:${{ github.sha }}
+              atulchan/billcost_app_frontend:${{ github.sha }}
 
     
