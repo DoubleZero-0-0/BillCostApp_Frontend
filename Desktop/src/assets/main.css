@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Source+Code+Pro:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Source Code Pro', monospace;
+
+
+}
+.headLineFont{
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+
+}
+
+.ViewBody {
+    width: 100%;
+    height: 100%;
+    background: url("public/money.png");
+    background-size: cover;
+}
+
+
