@@ -5,6 +5,7 @@ import Me from "../Pages/MePage/Me.vue";
 import Cost from "../Pages/CostPage/Cost.vue";
 import Login from "../Pages/Auth/Login.vue";
 import Register from "../Pages/Auth/Register.vue";
+import EmailVerified from "../Pages/Auth/EmailVerified.vue";
 
 
 const index = createRouter({
@@ -39,6 +40,15 @@ const index = createRouter({
             path: "/Register",
             name: "Register",
             component: Register,
+        },
+        {
+            path: "/emailVerify/:user_name/:user_email",
+            name: "EmailVerified",
+            component: EmailVerified,
+            props: route => ({
+                email: route.params.user_email,
+                name: route.params.user_name
+            }),
         },
 
     ],
