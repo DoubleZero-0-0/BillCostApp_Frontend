@@ -24,7 +24,7 @@
               ></v-text-field>
               <v-btn type="submit" color="primary">Login</v-btn> <br><br>
               <hr>
-              Don't Have Account,<a href="/Register">Register Now</a>
+              Don't Have Account,<a href="/register">Register Now</a>
             </v-form>
           </v-card-text>
         </v-card>

@@ -27,17 +27,17 @@ const index = createRouter({
             component: Categories,
         },
         {
-            path: "/MyAccount",
+            path: "/my_account",
             name: "MyAccount",
             component: Me,
         },
         {
-            path: "/Login",
+            path: "/login",
             name: "Login",
             component: Login,
         },
         {
-            path: "/Register",
+            path: "/register",
             name: "Register",
             component: Register,
         },
@@ -58,13 +58,13 @@ index.beforeEach((to, from, next) => {
 
     const isAuthenticated = localStorage.getItem('token');
 
-    if (to.path === '/Login' || to.path === '/Register') {
+    if (to.path === '/login' || to.path === '/register') {
         next();
         return;
     }
 
     if (!isAuthenticated) {
-        next('/Login');
+        next('/login');
         return;
     }
 
