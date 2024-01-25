@@ -72,6 +72,7 @@ export default defineComponent({
 
         const headers = {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
         };
 
         const dataJson = JSON.stringify(postData);
