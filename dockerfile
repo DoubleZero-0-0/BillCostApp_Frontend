@@ -11,7 +11,7 @@ COPY Mobile .
 RUN npm install
 
 # Expose the default port used by the Vue CLI development server
-EXPOSE 443
+EXPOSE 80
 
 # Start the Vue CLI development server
 CMD ["npm", "run", "dev"]
