@@ -44,6 +44,6 @@ jobs:
               docker rmi "$previous_image_id"
               fi
               docker pull atulchan/billcost_app_backend:${{ github.sha }}
-              docker run -d -p 5173:5173 --name billcost_app_frontend atulchan/billcost_app_frontend:${{ github.sha }} 
+              docker run -d -p 80:80 --name billcost_app_frontend atulchan/billcost_app_frontend:${{ github.sha }} 
 
     
