@@ -35,7 +35,7 @@
               <v-btn type="submit" color="primary">Register</v-btn>
               <br><br>
               <hr>
-              Have Account,<a href="/Login">Login Now</a>
+              Have Account,<a href="/login">Login Now</a>
             </v-form>
           </v-card-text>
         </v-card>
