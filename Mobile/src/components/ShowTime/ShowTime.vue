@@ -3,8 +3,8 @@
   <!-- Left side -->
   <v-col class="text-left" cols="6" md="6">
     <div>
-      <div>HI, ATUL</div>
-      <div class="SubFront">atulchandradash@gmail.com</div>
+      <div>HI, {{ username }}</div>
+      <div class="SubFront">{{ useremail }}</div>
     </div>
   </v-col>
 
@@ -21,11 +21,16 @@
 
 <script>
 import { defineComponent } from 'vue';
+import axios from "../../axios.js";
+import Swal from "sweetalert2";
+import router from "../../router/index.js";
 
 export default defineComponent({
   name: 'ShowTime',
   data() {
     return {
+      username: '',
+      useremail: '',
       currentTime: '',
       currentDay: '',
       currentDate: ''
@@ -34,6 +39,9 @@ export default defineComponent({
   mounted() {
     this.updateTime();
     setInterval(this.updateTime, 1000); // Update every second
+
+    this.getUserInfo();
+
   },
   methods: {
     updateTime() {
@@ -55,6 +63,24 @@ export default defineComponent({
       const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
       return days[dayIndex];
     },
+
+    getUserInfo() {
+
+      const headers = {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Authorization' : localStorage.getItem('token')
+      };
+
+      axios.get('/userInfo' ,{ headers })
+          .then((res) => {
+            this.username = res.data.data.userName
+            this.useremail = res.data.data.userEmail
+          })
+          .catch((error) => {
+            console.log(error);
+      });
+    }
   },
 });
 </script>

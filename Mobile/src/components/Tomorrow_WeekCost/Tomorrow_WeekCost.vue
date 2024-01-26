@@ -1,8 +1,36 @@
 <script>
 import {defineComponent} from 'vue'
+import axios from "../../axios.js";
 
 export default defineComponent({
-  name: "Tomorrow_WeekCost"
+  name: "Tomorrow_WeekCost",
+  data()
+  {
+    return {
+        weeklyCost: ''
+    }
+  },
+  mounted() {
+    this.getWeeklyCost();
+  },
+  methods: {
+    getWeeklyCost()
+    {
+      const headers = {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Authorization' : localStorage.getItem('token')
+      };
+
+      axios.get('/weeklyCost' ,{ headers })
+          .then((res) => {
+            this.weeklyCost = res.data.data
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+    }
+  }
 })
 </script>
 
@@ -24,7 +52,7 @@ export default defineComponent({
         <h4 >WEEKLY COST</h4>
       </v-col>
       <v-col  style="text-align: center">
-        <h1>100<span>৳</span></h1>
+        <h1>{{ weeklyCost }}<span>৳</span></h1>
       </v-col>
     </v-row>
   </v-col>
