@@ -26,7 +26,7 @@ WORKDIR /usr/share/nginx/html
 COPY --from=builder /app/dist .
 
 # Expose the default port used by Nginx
-EXPOSE 80
+EXPOSE 5173
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
