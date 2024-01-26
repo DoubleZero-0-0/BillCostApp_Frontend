@@ -14,7 +14,10 @@ RUN npm install
 EXPOSE 5173
 
 # Start the Vue CLI development server
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "build"]
+
+# Start the Vue CLI development server
+CMD ["npm", "run", "preview"]
 
 
 
