@@ -5,38 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0384960a-dc7d-4838-af65-c129b7365823" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/BillCostApp_Frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BillCostApp_Frontend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/jsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/public/dollar-banknotes-frame1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/public/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/public/money.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/public/wallpaper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/assets/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/assets/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/axios.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/components/Card.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/components/JS/alertToster.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/components/NavbarComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/components/ShowTime.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/components/SlidebarComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/components/WeekChart.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/views/Dashboard.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/views/EmailVerify.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/views/Login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/src/views/Register.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/vite.config.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mobile/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mobile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mobile/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +55,7 @@
       <workItem from="1705974800770" duration="22000" />
       <workItem from="1705974835058" duration="69000" />
       <workItem from="1706093737230" duration="1705000" />
-      <workItem from="1706265080216" duration="3574000" />
+      <workItem from="1706265080216" duration="4740000" />
     </task>
     <servers />
   </component>
