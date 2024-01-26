@@ -3,7 +3,7 @@ name: BillCostApp WorkFlow
 on:
   push:
     branches:
-      - hhhh
+      - main
 
 jobs:
   build-and-deploy:
