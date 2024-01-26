@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0384960a-dc7d-4838-af65-c129b7365823" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/BillCostApp_Frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BillCostApp_Frontend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mobile/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mobile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mobile/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile/vite.config.js" afterDir="false" />
     </list>
@@ -55,7 +53,7 @@
       <workItem from="1705974800770" duration="22000" />
       <workItem from="1705974835058" duration="69000" />
       <workItem from="1706093737230" duration="1705000" />
-      <workItem from="1706265080216" duration="4740000" />
+      <workItem from="1706265080216" duration="5457000" />
     </task>
     <servers />
   </component>
