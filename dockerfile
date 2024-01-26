@@ -1,25 +1,32 @@
-# Use an official Node.js runtime as a base image
-FROM node:lts-alpine
+# Use an official Node.js image as a base
+FROM node:lts-alpine AS builder
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the contents of the Mobile folder (assuming it's in the same directory as the Dockerfile)
-COPY Mobile .
+# Copy the package.json and package-lock.json files
+COPY Mobile/package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Expose the default port used by the Vue CLI development server
-EXPOSE 5173
+# Copy the rest of the application code
+COPY Mobile/ .
 
-# Start the Vue CLI development server
-CMD ["npm", "run", "build"]
+# Build the Vite application
+RUN npm run build
 
-# Start the Vue CLI development server
-CMD ["npm", "run", "preview"]
+# Use an official Nginx image as a base
+FROM nginx:alpine
 
+# Set the working directory inside the container
+WORKDIR /usr/share/nginx/html
 
+# Copy the built files from the builder stage
+COPY --from=builder /app/dist .
 
+# Expose the default port used by Nginx
+EXPOSE 80
 
-
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
